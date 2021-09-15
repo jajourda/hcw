@@ -72,6 +72,7 @@ export default function Home(props: any) {
 
 export async function getStaticProps(context: any) {
   let c = context;
+  console.log(c)
   const sheet = await getDataFromSheets();
   return {
     props: {
