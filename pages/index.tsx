@@ -3,7 +3,7 @@ import _ from "lodash";
 import * as React from "react";
 
 export interface IHomeProps { }
-export default function Home(props: IHomeProps) {
+export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
