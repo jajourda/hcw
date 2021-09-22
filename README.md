@@ -6,7 +6,7 @@ It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-
 
 ## Preview
 
-- testing on macbook
+- testing on macbook -a gain
 
 Preview the example live on [StackBlitz](http://stackblitz.com/):
 
