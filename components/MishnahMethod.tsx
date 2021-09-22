@@ -2,9 +2,9 @@ import * as React from 'react';
 
 export interface IMishnahMethodProps {
 }
-  /* tslint:disable:no-unused-variable */
 
-export default function MishnahMethod (props: IMishnahMethodProps) {
+
+export default function MishnahMethod () {
   return (
     <div>
       hi
