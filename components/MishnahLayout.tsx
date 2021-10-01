@@ -1,38 +1,21 @@
-import Head from "next/head";
-import _ from "lodash";
-// import * as pdfMake from "pdfmake/build/pdfmake";
-// const pdfMake = require('pdfmake/build/pdfmake.js');
-
-  
-
-// import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-// (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
-// import {dd} from '../data/pdfmakeDefinitions';
-
-
 import * as React from 'react';
-// import MishnahLayout from "../components/MishnahLayout";
-
 import {
-    PDFDocument,
-    PDFText,
-    PDFTable,
-    PDFTableRow,
-    PDFTableColumn,
-    PDFColumn,
-    PDFColumns,
-    pdf,
+  PDFDocument,
+  PDFText,
+  PDFTable,
+  PDFTableRow,
+  PDFTableColumn,
+  PDFColumn,
+  PDFColumns,
   } from 'react-pdfmake';
 
-export interface IMishnahProps {
+export interface IMishnahLayoutProps {
+    versionTitle: string;
 }
 
-export default function Mishnah (props: IMishnahProps) {
-    console.log(props)
-
-    const file = React.useMemo(() => {
-        return pdf(
-          <PDFDocument
+export default function MishnahLayout (props: IMishnahLayoutProps) {
+  return (
+    <PDFDocument
             pageSize="A5"
             pageOrientation="portrait"
             pageBreakBefore={(currentNode, followingNodesOnPage) => {
@@ -61,7 +44,7 @@ export default function Mishnah (props: IMishnahProps) {
               },
             }}
           >
-            <PDFText style="subheader">Headers</PDFText>
+            <PDFText style="subheader">Headers: {props.versionTitle} </PDFText>
             
             You can declare how many rows should be treated as a header. Headers are
             automatically repeated on the following pages
@@ -156,21 +139,5 @@ export default function Mishnah (props: IMishnahProps) {
               </PDFTableRow>
             </PDFTable>
           </PDFDocument>
-        );
-      }, []);
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Mishnah | How Church Works</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-          <h1 className="text-6xl">Create Your Mishnah PDF</h1> 
-          
-         
-    
-        <button className="bg-green font-semibold text-white p-2 w-32 rounded-full hover:bg-green focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2" onClick={() => file.open()}>Generate PDF</button>
-      </main>
-      </div>
   );
 }
