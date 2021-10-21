@@ -7,7 +7,7 @@ import { getDataFromSheets } from "./api/sheets";
 export default function Home(props: any) {
   console.log(props)
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen pt-2">
       <Head>
         <title>How Church Works</title>
         <link rel="icon" href="/favicon.ico" />
