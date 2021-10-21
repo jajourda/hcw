@@ -8,7 +8,7 @@ export interface IMishnahProps {
 
 export default function Mishnah (props: IMishnahProps) {
 
-
+console.log(props)
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
