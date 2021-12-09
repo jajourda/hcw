@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        check: "url('/icons/check.svg')",
+        landscape: "url('/images/landscape/2.jpg')",
+      }),
       colors: {
         blue: {
           DEFAULT: "#3399cc",
@@ -11,11 +15,25 @@ module.exports = {
         green: {
           DEFAULT: "#75b55e",
         },
+        black:{
+          DEFAULT:"#444444"
+        },
+        purple:{
+          DEFAULT:"#b248fc"
+        }
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["checked"],
+      borderColor: ["checked"],
+      inset: ["checked"],
+      zIndex: ["hover", "active"],
+    },
   },
   plugins: [],
+  future: {
+    purgeLayersByDefault: true,
+  },
 };

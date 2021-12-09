@@ -3,6 +3,8 @@ import _ from "lodash";
 import * as React from "react";
 import { getDataFromSheets } from "./api/sheets";
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import WatchCta from "../components/WatchCta";
 
 
 export default function Home(props: any) {
@@ -14,8 +16,13 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
+
+      <Hero heroImgAlt="test"/>
+      <WatchCta watchUrl="https://www.youtube.com/channel/UCGp8pFe132gzI6YvnAxHOXw"/>
+
       
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-6xl font-bold mt-20">
           Welcome to{" "}
           <a className="text-blue" href="https://nextjs.org">
             How Church Works!
