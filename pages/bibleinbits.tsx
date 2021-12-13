@@ -53,10 +53,11 @@ export default function App (props: any) {
                     
                     
                     <div className="bg-white dark:bg-gray-800 w-full p-4">
-                        <p className="text-indigo-500 text-md font-medium">
-                            Video
+                        <p className="text-purple text-md font-medium mb-3">
+                            <strong><small>CATEGORY</small></strong> <br />
+                            <span className="text-black">#{(item.category).replace(/ /g, '')}</span>
                         </p>
-                        <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
+                        <p className="text-purple dark:text-white text-2xl font-medium mb-2">
                             {item.passageReference}
                         </p>
                         <p className="text-gray-400 dark:text-gray-300 font-light text-md">
