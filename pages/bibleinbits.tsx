@@ -21,11 +21,11 @@ export default function App (props: any) {
       <div className="w-full bg-white p-12">
     <div className="header flex items-end justify-between mb-12">
         <div className="title">
-            <p className="text-left text-4xl font-bold text-gray-800 mb-4">
+            <p className="text-left text-4xl font-bold text-purple mb-4">
                 Bible-in-Bits
             </p>
             <p className="text-2xl font-light text-gray-400">
-               Our most recent passages explored
+               Our most recent passages explored.
             </p>
         </div>
 
