@@ -26,7 +26,8 @@ export async function getBibleInBits() {
         category:row[4],
         questions:row[5],
         notes:row[6],
-        tldr:row[7]
+        tldr:row[7],
+        youtube:row[8]
       }));
     }
   } catch (err) {
