@@ -48,7 +48,7 @@ export default function App (props: any) {
         {props.data && props.data.length ? (
               props.data.map((item: any) => (
                 <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
-                <a href={"https://youtu.be/"+item.youtube} className="w-full block h-full">
+                <a href={"https://youtu.be/"+item.youtube} target="_blank" className="w-full block h-full">
                     <img alt="blog photo" src={"https://i.ytimg.com/vi/"+item.youtube+"/0.jpg"} className="max-h-40 w-full object-cover"/>
                     
                     
