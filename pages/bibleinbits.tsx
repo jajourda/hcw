@@ -28,6 +28,10 @@ export default function App (props: any) {
                Our most recent passages explored
             </p>
         </div>
+        
+        {/* https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api */}
+
+
         {/* <div className="text-end">
             <form className="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
                 <div className=" relative ">
