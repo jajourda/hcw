@@ -27,7 +27,7 @@ export async function getBibleInBits() {
         questions:row[5],
         notes:row[6],
         tldr:row[7],
-        youtube:row[8]
+        youtube:row[8],
       }));
     }
   } catch (err) {

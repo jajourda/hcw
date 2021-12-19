@@ -9,6 +9,11 @@ export interface IAppProps {
 }
 
 export default function App (props: any) {
+    const sorted = _.sortBy(props.data, function(dateObj) {
+        return new Date(dateObj.timestamp);
+      }).reverse();
+      console.log('i am sorted')
+      console.log(sorted)
   return (
    <Layout>
       <Head>
@@ -45,9 +50,9 @@ export default function App (props: any) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
-        {props.data && props.data.length ? (
-              props.data.map((item: any) => (
-                <div className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+        {sorted && sorted.length ? (
+              sorted.map((item: any) => (
+                <div key={item.timestamp} className="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
                 <a href={"https://youtu.be/"+item.youtube} target="_blank" className="w-full block h-full">
                     <img alt="blog photo" src={"https://i.ytimg.com/vi/"+item.youtube+"/0.jpg"} className="max-h-40 w-full object-cover"/>
                     
