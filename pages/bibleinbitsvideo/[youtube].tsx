@@ -21,8 +21,8 @@ const fetcher = async (url: string) => {
 
 export interface IBibVideoPageProps {}
 
-export default function BibVideoPage(props: IBibVideoPageProps) {
-  console.log(props);
+export default function BibVideoPage() {
+  // console.log(props);
 
   const { query } = useRouter();
   const { data, error } = useSWR(

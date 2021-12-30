@@ -14,8 +14,8 @@ export default function Bib(props: any) {
   const sorted = _.sortBy(props.data, function (dateObj) {
     return new Date(dateObj.timestamp);
   }).reverse();
-  console.log("i am sorted");
-  console.log(sorted);
+  // console.log("i am sorted");
+  // console.log(sorted);
   return (
     <Layout>
       <Head>

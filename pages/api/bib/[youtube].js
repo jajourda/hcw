@@ -5,9 +5,9 @@ import {getBibleInBits} from './index'
 
 export default async function bibVidHandler({ query: { youtube } }, res) {
   const data = await getBibleInBits()
-  console.log('&&&&&&&&&&&&&&&&&&&&&&&&')
-  console.log('i am the data inside api/bib/id.js')
-  console.log(data)
+  // console.log('&&&&&&&&&&&&&&&&&&&&&&&&')
+  // console.log('i am the data inside api/bib/id.js')
+  // console.log(data)
 
   
   
