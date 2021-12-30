@@ -91,7 +91,7 @@ export default function BibVideoPost ({video}: IBibVideoPostProps) {
 
 
 <section className="aspect-w-16 aspect-h-9">
-  <iframe src={"https://www.youtube.com/embed/"+video.youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src={"https://www.youtube.com/embed/"+video.youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </section>
 
 
