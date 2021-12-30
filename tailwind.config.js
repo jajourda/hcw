@@ -32,7 +32,9 @@ module.exports = {
       zIndex: ["hover", "active"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
   future: {
     purgeLayersByDefault: true,
   },
