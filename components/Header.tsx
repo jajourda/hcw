@@ -21,6 +21,9 @@ export default function Header () {
                     <a href="/bibleinbits" className="py-2 px-6 flex">
                         Bible-in-Bits
                     </a>
+                    <a href="/questions" className="py-2 px-6 flex">
+                        Questions
+                    </a>
                     <a href="#" className="py-2 px-6 flex">
                         Contact
                     </a>
