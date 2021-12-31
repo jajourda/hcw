@@ -28,14 +28,14 @@ export default function Header () {
                         Contact
                     </a>
                 </nav>
-                <button className="lg:hidden flex flex-col ml-4">
+                <a type='button' href='#footerlinks' className="lg:hidden flex flex-col ml-4">
                     <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
                     </span>
                     <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
                     </span>
                     <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
                     </span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
