@@ -66,6 +66,9 @@ export default function Footer() {
                     Watch
                   </a>
                   <li>
+                    <a href="/publicreading">Public Reading</a>
+                  </li>
+                  <li>
                     <a href="/bibleinbits">Bible-in-Bits</a>
                   </li>
                   <li>

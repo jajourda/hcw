@@ -18,6 +18,9 @@ export default function Header () {
                     <a href="https://www.youtube.com/channel/UCGp8pFe132gzI6YvnAxHOXw" target="_blank" className="py-2 px-6 flex">
                         Watch
                     </a>
+                    <a href="/publicreading" className="py-2 px-6 flex">
+                        Public Reading
+                    </a>
                     <a href="/bibleinbits" className="py-2 px-6 flex">
                         Bible-in-Bits
                     </a>
