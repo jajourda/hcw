@@ -50,7 +50,6 @@ export default function WeeklyReadingPage() {
       <title>Public Reading - Weekly Reading | How Church Works</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <WeeklyReading reading={data} />
     </Layout>
   );

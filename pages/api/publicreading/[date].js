@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import {getPublicReading} from './index'
 import { parseISO, parse } from 'date-fns';
-import { format } from "date-fns";
+import { format, formatISO } from "date-fns";
 
 import _ from "lodash";
 
@@ -26,32 +26,24 @@ export default async function WeeklyReadingHandler({ query: { date } }, res) {
   // })
 
   const filtered = _.filter(data, function(r) {
+    // let rDate = format(new Date(r.date), "MM-dd-yy");
+    let dateString = r.date;
+    dateString = dateString.split('/')
     
+    let rDate = dateString[0]+"-"+dateString[1]+"-"+dateString[2];
+    // console.log('i am datestring', rDate,date)
     
-    let rDate = parse(r.date, "M-d-yy", new Date());
-    
-    console.log('i am rDate')
-    console.log(rDate);
-    
-    if (rDate === date){
+    if(rDate === date){
+     // console.log('i equal!',date, rDate)
       return r;
     }
     
-    
-    // rDate = format(new Date(rDate).toISOString, "MM-dd-y")
-    // console.log(rDate);
-    
-  //   console.log(format(parseISO(r.date), "MM-dd-y "))
-  // console.log(parseISO(new Date(r.date)))
-    // let rDate = new Date(r.date).toISOString();
-    // if ( (format(rDate, "MM-dd-y "))=== date){
-    //   return r;
-    // }
+
     
   });
 
-  console.log('i am filtered!!!!!!!!!!!!!!!!!!!!!!')
-  console.log(filtered)
+  // console.log('i am filtered!!!!!!!!!!!!!!!!!!!!!!')
+  // console.log(filtered)
 
   // reading with date exists
   if (filtered.length > 0) {

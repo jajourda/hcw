@@ -12,6 +12,13 @@ export default function SingleReadingCard({
 }: ISingleReadingCardProps) {
   console.log("i am props in single reading card");
   console.log(reading);
+  
+  
+  const dateUrl = format(new Date(reading.date), "M-dd-yy");
+  console.log('i am reading.date')
+  console.log(reading.date)
+  console.log('i am dateUrl')
+  console.log(dateUrl)
   return (
     <div className="flex bg-white dark:bg-gray-800 rounded-lg shadow">
       <div className="flex-none w-24 md:w-48  relative">
@@ -60,7 +67,7 @@ export default function SingleReadingCard({
           {/* parse(r.date, 'MM/dd/yyyy', new Date()) */}
         <Link
           href="/publicreading/weeklyreading/[date]"
-          as={`/publicreading/weeklyreading/${format(new Date(reading.date), "MM-dd-yy")}`}
+          as={`/publicreading/weeklyreading/${dateUrl}`}
         >
           <a
             type="button"
@@ -70,9 +77,9 @@ export default function SingleReadingCard({
           </a>
           </Link>
         </div>
-        <p className="text-sm text-gray-500 dark:text-gray-300">
+        {/* <p className="text-sm text-gray-500 dark:text-gray-300">
           see more readings...
-        </p>
+        </p> */}
       </div>
     </div>
   );
