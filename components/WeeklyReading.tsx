@@ -25,6 +25,9 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
   if(error){
     console.log(error)
   }
+  if(data){
+    console.log(data)
+  }
   // if (error) return "An error has occurred."+{error};
   // if (!data) return "Loading...";
   return (
