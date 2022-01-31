@@ -59,14 +59,14 @@ export default function PublicReading(props: any) {
       <div className="flex flex-col sm:flex-row gap-10 p-12">
         <div className="intro order-2 sm:order-1 sm:w-1/2 ">
           <div className=" flex flex-col relative z-20 mr-20 text-left">
-            <span className="w-20 h-2 bg-black dark:bg-white mb-12"></span>
-            <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl text-black flex flex-col leading-none dark:text-white text-gray-800">
+            <span className="w-20 h-2 bg-black  mb-12"></span>
+            <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl text-black flex flex-col leading-none  text-gray-800">
               Weekly
               <span className="text-5xl text-green sm:text-6xl">
                 Public Reading
               </span>
             </h1>
-            <p className="text-sm sm:text-base text-gray-700 dark:text-white">
+            <p className="text-sm sm:text-base text-gray-700 ">
               Join in for the public reading of Scripture! Gather with the
               people of God for instruction, upbuilding, and the equipping from
               the Spirit of Yeshua.
@@ -80,7 +80,7 @@ export default function PublicReading(props: any) {
               </a>
               <a
                 href="#"
-                className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-green text-green dark:text-white hover:bg-green hover:text-white text-md"
+                className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-green text-green  hover:bg-green hover:text-white text-md"
               >
                 Read more
               </a>

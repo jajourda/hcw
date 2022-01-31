@@ -20,7 +20,7 @@ export default function SingleReadingCard({
   console.log('i am dateUrl')
   console.log(dateUrl)
   return (
-    <div className="flex bg-white dark:bg-gray-800 rounded-lg shadow">
+    <div className="flex bg-white rounded-lg shadow">
       <div className="flex-none w-24 md:w-48  relative">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/K%C3%B6ln-Tora-und-Innenansicht-Synagoge-Glockengasse-040.JPG/1200px-K%C3%B6ln-Tora-und-Innenansicht-Synagoge-Glockengasse-040.JPG"
@@ -30,10 +30,10 @@ export default function SingleReadingCard({
       </div>
       <div className="flex-auto p-6">
         <div className="flex flex-wrap">
-        <strong className="flex-auto text-6xl text-black font-semibold dark:text-gray-50">
+        <strong className="flex-auto text-6xl text-black font-semibold ">
             {reading.date}
           </strong>
-          <strong className="flex-auto text-3xl text-green font-semibold dark:text-gray-50">
+          <strong className="flex-auto text-3xl text-green font-semibold ">
             <div className="text-xl text-black">TORAH</div>
             {reading.torahPassage}
             <div className="text-base text-gray-400 font-thin">
@@ -41,7 +41,7 @@ export default function SingleReadingCard({
             </div>
           </strong>
 
-          <strong className="flex-auto text-3xl text-green font-semibold dark:text-gray-50">
+          <strong className="flex-auto text-3xl text-green font-semibold ">
             <div className="text-xl text-black">GOSPEL</div>
             {reading.gospelPassage}
             <div className="text-base text-gray-400 font-thin">
@@ -49,11 +49,11 @@ export default function SingleReadingCard({
             </div>
           </strong>
 
-          <div className="w-full flex-none text-sm font-medium text-gray-500 dark:text-gray-300 mt-2">
+          <div className="w-full flex-none text-sm font-medium text-gray-500 mt-2">
             {reading.torahTitle}
           </div>
         </div>
-        <div className="flex w-full items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
+        <div className="flex w-full items-baseline mt-4 mb-6 text-gray-700 ">
           <div className="space-x-2 w-full flex-none">
             
           
@@ -77,9 +77,7 @@ export default function SingleReadingCard({
           </a>
           </Link>
         </div>
-        {/* <p className="text-sm text-gray-500 dark:text-gray-300">
-          see more readings...
-        </p> */}
+        
       </div>
     </div>
   );
