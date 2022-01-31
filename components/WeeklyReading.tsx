@@ -42,6 +42,7 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
         passageReference={reading.torahPassage}
         readingText={torahReading.text}
         verseTotal={parseInt(reading.torahVerseTotal)}
+        torahTitle={reading.torahTitle}
       />
       <FormattedReading
         isTorah={false}

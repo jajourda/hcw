@@ -3,8 +3,9 @@ import * as React from "react";
 export interface IFormattedReadingProps {
   isTorah: boolean;
   passageReference: string;
-  readingText:string;
+  readingText: string;
   verseTotal: number;
+  torahTitle?: string;
 }
 
 export default function FormattedReading(props: IFormattedReadingProps) {
@@ -17,9 +18,15 @@ export default function FormattedReading(props: IFormattedReadingProps) {
           ) : (
             <span className="block text-green text-base">GOSPEL READING</span>
           )}
-          
+
           <span className="block text-black">
-            {props.passageReference} <div className="font-thin text-gray-400 text-base tracking-wide">({props.verseTotal} verses)</div>
+           
+            {props.passageReference}{" "}
+            <div className="font-thin text-gray-400 text-base tracking-wide">
+            {props.torahTitle ? (
+              props.torahTitle+" | "
+            ): null} ({props.verseTotal} verses)
+            </div>
           </span>
         </h2>
         <p className="text-xl mt-4 max-w-prose text-left mx-auto text-black font-light leading-10">
