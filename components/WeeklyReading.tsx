@@ -1,6 +1,9 @@
 import * as React from "react";
 import { PublicReadingInterfaceProps } from "../interfaces/publicreading";
 import useSWR from "swr";
+import FormattedReading from "./readings/FormattedReading";
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export interface IWeeklyReadingProps {
   reading: PublicReadingInterfaceProps;
@@ -8,33 +11,44 @@ export interface IWeeklyReadingProps {
 //https://api.biblia.com/v1/RegisteredApplications/Details/15087
 //biblia api key
 //7166e434ad5dd762b8c721209c878d5d
-const url =
-  "https://api.biblia.com/v1/bible/content/LEB.html?passage=John3.16&key=7166e434ad5dd762b8c721209c878d5d";
-const fetcher = (url: any) => fetch(url).then((res) => {
-  console.log('i am response')
-  console.log(res)
-  res.json()
-});
 
 export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
-  const { data, error } = useSWR(
-   url,
+  const { data: torahReading, error: torahError } = useSWR(
+    "/api/getScripture/" + reading.torahPassage,
     fetcher
   );
 
-  if(error){
-    console.log(error)
-  }
-  if(data){
-    console.log(data)
-  }
-  // if (error) return "An error has occurred."+{error};
-  // if (!data) return "Loading...";
+  const { data: gospelReading, error: gospelError } = useSWR(
+    "/api/getScripture/" + reading.gospelPassage,
+    fetcher
+  );
+
+  if (torahError || gospelError) return <h1>"An error has occurred."</h1>;
+  if (!torahReading || !gospelReading) return <h1>"Loading..."</h1>;
+  console.log("i am torahReading", torahReading);
+  console.log("i am gospelReading", gospelReading);
+
   return (
-    <div>
-      <h1>weekly reading</h1>
-      <h2>{reading.date}</h2>
-      
+    <div className="w-full">
+      <h1 className="text-3xl py-10 bg-green w-full font-extrabold text-black sm:text-4xl">
+        <span className="block  text-white  font-normal text-1xl">Weekly Public Reading</span>
+        <span className="block sm:text-8xl lg:text-8xl text-white mt-3">
+          {reading.date}
+        </span>
+      </h1>
+
+      <FormattedReading
+        isTorah={true}
+        passageReference={reading.torahPassage}
+        readingText={torahReading.text}
+        verseTotal={parseInt(reading.torahVerseTotal)}
+      />
+      <FormattedReading
+        isTorah={false}
+        passageReference={reading.gospelPassage}
+        readingText={gospelReading.text}
+        verseTotal={parseInt(reading.gospelVerseTotal)}
+      />
     </div>
   );
 }
