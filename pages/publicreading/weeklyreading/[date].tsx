@@ -22,7 +22,7 @@ const fetcher = async (url: string) => {
   }
   return data;
 };
-
+//>problem page 2/3/22
 export interface IWeeklyReadingPageProps { }
 
 export default function WeeklyReadingPage() {
