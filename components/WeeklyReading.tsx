@@ -33,8 +33,8 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
   //   console.log('i am new line detected', match)
   // }
   // torahReading.text = torahReading.text.replace(/\r/gm, <br />);
-  torahReading.text = torahReading.text.split(/\r?\n/)
-  gospelReading.text = gospelReading.text.split(/\r?\n/)
+  // torahReading.text = torahReading.text.split(/\r?\n/)
+  // gospelReading.text = gospelReading.text.split(/\r?\n/)
   //console.log('i am text', torahReading.text)
 
   return (
@@ -46,7 +46,7 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
         </span>
       </h1>
 
-      <FormattedReading
+      {/* <FormattedReading
         isTorah={true}
         passageReference={reading.torahPassage}
         readingText={torahReading.text}
@@ -58,7 +58,7 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
         passageReference={reading.gospelPassage}
         readingText={gospelReading.text}
         verseTotal={parseInt(reading.gospelVerseTotal)}
-      />
+      /> */}
     </div>
   );
 }
