@@ -3,12 +3,13 @@ import * as React from "react";
 export interface IFormattedReadingProps {
   isTorah: boolean;
   passageReference: string;
-  readingText: string;
+  readingText: string[];
   verseTotal: number;
   torahTitle?: string;
 }
 
 export default function FormattedReading(props: IFormattedReadingProps) {
+  // console.log('i am props ', props.readingText)
   return (
     <section className="bg-white">
       <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
@@ -20,18 +21,16 @@ export default function FormattedReading(props: IFormattedReadingProps) {
           )}
 
           <span className="block text-black">
-           
+
             {props.passageReference}{" "}
             <div className="font-thin text-gray-400 text-base tracking-wide">
-            {props.torahTitle ? (
-              props.torahTitle+" | "
-            ): null} ({props.verseTotal} verses)
+              {props.torahTitle ? (
+                props.torahTitle + " | "
+              ) : null} ({props.verseTotal} verses)
             </div>
           </span>
         </h2>
-        <p className="text-xl mt-4 max-w-prose text-left mx-auto text-black font-light leading-10">
-          {props.readingText}
-        </p>
+        <div> {props.readingText.map((item, i: number) => <p className="text-xl mt-5 max-w-prose text-left mx-auto text-black font-light leading-10 formatted-verse" dangerouslySetInnerHTML={{ __html: item }} key={i} ></p>)} </div>
       </div>
     </section>
   );

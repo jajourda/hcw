@@ -14,9 +14,9 @@ body {
   border-color: #e6e6e6;
 }
 
-footer{
-  margin-top:2em;
-  color:white;
+footer {
+  margin-top: 2em;
+  color: white;
 }
 .footer-link {
   width: 12em;
@@ -50,3 +50,10 @@ footer{
   white-space: nowrap!important;
   border: 0!important;
 } */
+
+.formatted-verse span:first-of-type {
+  color: #75b55e;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-right: 0.25em;
+}

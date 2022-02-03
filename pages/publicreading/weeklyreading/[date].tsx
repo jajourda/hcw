@@ -9,6 +9,8 @@ import Head from "next/head";
 import WeeklyReading from "../../../components/WeeklyReading";
 import _ from "lodash";
 
+import DisqusComments from "../../../components/DisqusComments";
+
 const fetcher = async (url: string) => {
   const res = await fetch(url);
   const data = await res.json();
@@ -21,12 +23,13 @@ const fetcher = async (url: string) => {
   return data;
 };
 
-export interface IWeeklyReadingPageProps {}
+export interface IWeeklyReadingPageProps { }
 
 export default function WeeklyReadingPage() {
   // console.log(props);
 
   const { query } = useRouter();
+  const { asPath } = useRouter();
   const { data, error } = useSWR(
     () => query.date && `/api/publicreading/${query.date}`,
     fetcher
@@ -40,17 +43,20 @@ export default function WeeklyReadingPage() {
           <title>Public Reading - Weekly Reading | How Church Works</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Loading/>
+        <Loading />
       </Layout>
     );
+
+
 
   return (
     <Layout>
       <Head>
-      <title>Public Reading - Weekly Reading | How Church Works</title>
+        <title>Public Reading - Weekly Reading | How Church Works</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WeeklyReading reading={data} />
+      <DisqusComments url={asPath} identifier={data.date} title={data.date} />
     </Layout>
   );
 }
