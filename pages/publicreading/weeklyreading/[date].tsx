@@ -29,7 +29,7 @@ export default function WeeklyReadingPage() {
   // console.log(props);
 
   const { query } = useRouter();
-  const { asPath } = useRouter();
+  // const { asPath } = useRouter();
   const { data, error } = useSWR(
     () => query.date && `/api/publicreading/${query.date}`,
     fetcher
