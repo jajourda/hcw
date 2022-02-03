@@ -9,7 +9,7 @@ import Head from "next/head";
 import WeeklyReading from "../../../components/WeeklyReading";
 import _ from "lodash";
 
-import DisqusComments from "../../../components/DisqusComments";
+// import DisqusComments from "../../../components/DisqusComments";
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
