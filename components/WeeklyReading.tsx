@@ -1,7 +1,7 @@
 import * as React from "react";
 import { PublicReadingInterfaceProps } from "../interfaces/publicreading";
 import useSWR from "swr";
-import FormattedReading from "./readings/FormattedReading";
+// import FormattedReading from "./readings/FormattedReading";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
