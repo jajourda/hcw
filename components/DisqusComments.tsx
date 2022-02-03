@@ -1,4 +1,4 @@
-import * as React from 'react';
+// import * as React from 'react';
 import { DiscussionEmbed } from "disqus-react"
 
 export interface IDisqusCommentsProps {
