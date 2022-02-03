@@ -56,7 +56,7 @@ export default function WeeklyReadingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WeeklyReading reading={data} />
-      <DisqusComments url={asPath} identifier={data.date} title={data.date} />
+      {/* <DisqusComments url={asPath} identifier={data.date} title={data.date} /> */}
     </Layout>
   );
 }
