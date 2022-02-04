@@ -29,6 +29,13 @@ export default function FormattedReading(props: IFormattedReadingProps) {
               ) : null} ({props.verseTotal} verses)
             </div>
           </span>
+          <div>
+            {/* //todo create buttons that go to getscripture api and change the value of the reading.text via getScripture/api */}
+            {/* <span className="text-base font-thin">version:
+              <button> LEB</button>
+            </span> */}
+
+          </div>
         </h2>
         <div> {props.readingText.map((item, i: number) => <p className="text-xl mt-5 max-w-prose text-left mx-auto text-black font-light leading-10 formatted-verse" dangerouslySetInnerHTML={{ __html: item }} key={i} ></p>)} </div>
       </div>
