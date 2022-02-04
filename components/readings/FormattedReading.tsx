@@ -30,7 +30,7 @@ export default function FormattedReading(props: IFormattedReadingProps) {
             </div>
           </span>
         </h2>
-        <div> {props.readingText.map((item, i: number) => <p className="text-xl mt-5 max-w-prose text-left mx-auto text-black font-light leading-10 formatted-verse" dangerouslySetInnerHTML={{ __html: item }} key={i} ></p>)} </div>
+        <div> {props.readingText.map((item, i: number) => <p className="text-xl mt-5 max-w-prose text-left mx-auto text-black font-light leading-10 formatted-verse" key={i} ></p>)} </div>
       </div>
     </section>
   );
