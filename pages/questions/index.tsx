@@ -1,4 +1,3 @@
-import * as React from "react";
 import Head from "next/head";
 import _ from "lodash";
 import Layout from "../../components/Layout";
@@ -8,7 +7,7 @@ import { QuestioningTheBibleInterfaceProps } from "../../interfaces/questioningt
 
 import { getQuestioningTheBible } from "../api/questioningthebible";
 
-export interface IBibProps {}
+export interface IBibProps { }
 
 export default function Bib(props: any) {
   const sorted = _.sortBy(props.data, function (dateObj) {
