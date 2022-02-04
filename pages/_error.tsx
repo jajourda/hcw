@@ -1,6 +1,9 @@
 import Error from 'next/error';
 // https://github.com/vercel/next.js/discussions/12246
 
+//>super helpful after a strange error on vercel
+// https://thomasstep.com/blog/next-js-prerendering-error
+
 
 function Page({ statusCode }: { statusCode: any }) {
     return <Error statusCode={statusCode}></Error>;
