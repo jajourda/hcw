@@ -3,7 +3,10 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -19,8 +22,20 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types":["node"]
+    "types": [
+      "node"
+    ],
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "data/pdfmakeDefinitions.js", "pages/api/bib/index.js", "pages/api/bib/[youtube].js"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/pdfmakeDefinitions.js",
+    "pages/api/bib/index.js",
+    "pages/api/bib/[youtube].js"
+  ]
 }
