@@ -30,6 +30,7 @@ export default function WeeklyReadingPage() {
 
   const { query } = useRouter();
   const { asPath } = useRouter();
+  console.log('i am asPath', asPath)
   const { data, error } = useSWR(
     () => query.date && `/api/publicreading/${query.date}`,
     fetcher
@@ -56,7 +57,7 @@ export default function WeeklyReadingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WeeklyReading reading={data} />
-      <DisqusComments url={asPath} identifier={data.date} title={data.date} />
+      <DisqusComments url="http://howchurch.works" identifier={asPath} title={data.date} />
     </Layout>
   );
 }
