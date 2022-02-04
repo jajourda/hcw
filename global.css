@@ -51,9 +51,9 @@ footer {
   border: 0!important;
 } */
 
-/* .formatted-verse span:first-of-type {
+.formatted-verse span:first-of-type {
   color: #75b55e;
   font-weight: 700;
   font-size: 1.25em;
   margin-right: 0.25em;
-} */
+}
