@@ -15,12 +15,12 @@ module.exports = {
         green: {
           DEFAULT: "#75b55e",
         },
-        black:{
-          DEFAULT:"#444444"
+        black: {
+          DEFAULT: "#444444",
         },
-        purple:{
-          DEFAULT:"#b248fc"
-        }
+        purple: {
+          DEFAULT: "#b248fc",
+        },
       },
     },
   },
@@ -32,9 +32,7 @@ module.exports = {
       zIndex: ["hover", "active"],
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
   future: {
     purgeLayersByDefault: true,
   },
