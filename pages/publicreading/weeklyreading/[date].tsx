@@ -9,7 +9,7 @@ import Head from "next/head";
 import WeeklyReading from "../../../components/WeeklyReading";
 import _ from "lodash";
 
-// import DisqusComments from "../../../components/DisqusComments";
+import DisqusComments from "../../../components/DisqusComments";
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -29,7 +29,7 @@ export default function WeeklyReadingPage() {
   // console.log(props);
 
   const { query } = useRouter();
-  // const { asPath } = useRouter();
+  const { asPath } = useRouter();
   const { data, error } = useSWR(
     () => query.date && `/api/publicreading/${query.date}`,
     fetcher
@@ -56,7 +56,7 @@ export default function WeeklyReadingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WeeklyReading reading={data} />
-      {/* <DisqusComments url={asPath} identifier={data.date} title={data.date} /> */}
+      <DisqusComments url={asPath} identifier={data.date} title={data.date} />
     </Layout>
   );
 }
