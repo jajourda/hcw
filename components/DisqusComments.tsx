@@ -15,12 +15,16 @@ export default function DisqusComments(props: IDisqusCommentsProps) {
         title: props.title // Single post title
     }
     return (
-        <div>
-            <h3>Comments</h3>
-            <DiscussionEmbed
-                shortname={disqusShortname}
-                config={disqusConfig}
-            />
+        <div className="w-full flex flex-col items-center">
+            <h3 className="w-10/12 md:w-6/12 item text-5xl">Comments</h3><br />
+
+            <div className="w-10/12 md:w-6/12 item">
+                <DiscussionEmbed
+                    shortname={disqusShortname}
+                    config={disqusConfig}
+                />
+            </div>
+
         </div>
     );
 }
