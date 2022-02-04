@@ -6,7 +6,7 @@ import useSWR from "swr";
 import Layout from "../../../components/Layout";
 import Loading from "../../../components/Loading";
 import Head from "next/head";
-import WeeklyReading from "../../../components/WeeklyReading";
+// import WeeklyReading from "../../../components/WeeklyReading";
 import _ from "lodash";
 
 // import DisqusComments from "../../../components/DisqusComments";
@@ -55,7 +55,7 @@ export default function WeeklyReadingPage() {
         <title>Public Reading - Weekly Reading | How Church Works</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <WeeklyReading reading={data} />
+      {/* <WeeklyReading reading={data} /> */}
       {/* <DisqusComments url={asPath} identifier={data.date} title={data.date} /> */}
     </Layout>
   );

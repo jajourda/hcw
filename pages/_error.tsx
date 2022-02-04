@@ -1,4 +1,5 @@
 import Error from 'next/error';
+// https://github.com/vercel/next.js/discussions/12246
 
 
 function Page({ statusCode }: { statusCode: any }) {
