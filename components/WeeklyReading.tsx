@@ -25,17 +25,17 @@ export default function WeeklyReading({ reading }: IWeeklyReadingProps) {
 
   if (torahError || gospelError) return <h1>"An error has occurred."</h1>;
   if (!torahReading || !gospelReading) return <h1>"Loading..."</h1>;
-  console.log("i am torahReading", torahReading);
-  console.log("i am gospelReading", gospelReading);
+  // console.log("i am torahReading", torahReading);
+  // console.log("i am gospelReading", gospelReading);
   var match = /\r|\n/.exec(torahReading.text);
   if (match) {
     // Found one, look at `match` for details, in particular `match.index`
-    console.log('i am new line detected', match)
+    // console.log('i am new line detected', match)
   }
   // torahReading.text = torahReading.text.replace(/\r/gm, <br />);
   torahReading.text = torahReading.text.split(/\r?\n/)
   gospelReading.text = gospelReading.text.split(/\r?\n/)
-  console.log('i am text', torahReading.text)
+  // console.log('i am text', torahReading.text)
 
   return (
     <div className="w-full">
