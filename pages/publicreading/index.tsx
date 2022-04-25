@@ -19,7 +19,10 @@ export interface IBibProps {
 export default function PublicReading(props: any) {
   //logic
   //todo - find and store only present and future dates in readings
-  const listReadings = _.filter(props.readings, function (item) {
+  const listReadings = props.readings;
+
+  //todo - create an array that stores all future readings inside of it
+  const futureReadings = _.filter(props.readings, function (item) {
     // console.log('i am item:')
     // console.log(item)
     let rDate = isFuture(new Date(item.date));
@@ -30,6 +33,7 @@ export default function PublicReading(props: any) {
       // console.log('i am false')
     }
   });
+
   //todo- capturetoday and store in the variable `today`
   const today = new Date();
   //const today = new Date("7/10/2021");
@@ -37,7 +41,7 @@ export default function PublicReading(props: any) {
   let upcomingSaturday;
 
   if (!isSaturday(today)) {
-    upcomingSaturday = listReadings[0];
+    upcomingSaturday = futureReadings[0];
   } else {
     upcomingSaturday = _.filter(props.readings, function (item) {
       return isSameDay(today, new Date(item.date));
@@ -121,7 +125,7 @@ export default function PublicReading(props: any) {
       "
           >
             <div className="text-7xl uppercase text-black">Septennial</div>
-             Reading List
+            Reading List
           </div>
 
           <div
