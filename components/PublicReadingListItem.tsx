@@ -60,16 +60,16 @@ export default function PublicReadingListItem({
         {/* <RightArrow/> */}
       </td>
       <td>
-      <Link
+        <Link
           href="/publicreading/weeklyreading/[date]"
           as={`/publicreading/weeklyreading/${dateUrl}`}
         >
-        <a
-          type="button"
-          className=" font-thin py-2 px-4 mr-3 flex justify-center items-center  bg-green hover:bg-white hover:text-green focus:ring-green focus:ring-offset-green text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  w-12 h-12 rounded-lg "
-        >
-        Read
-        </a>
+          <a
+            type="button"
+            className=" font-thin py-2 px-4 mr-3 flex justify-center items-center  bg-green hover:bg-white hover:text-green focus:ring-green focus:ring-offset-green text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  w-12 h-12 rounded-lg "
+          >
+            Read
+          </a>
         </Link>
       </td>
     </tr>

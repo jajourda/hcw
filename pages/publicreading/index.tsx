@@ -98,6 +98,8 @@ export default function PublicReading(props: any) {
         </div>
       </div>
 
+
+
       <ColoredBgSection
         color="green"
         lead="Septennial Reading List"

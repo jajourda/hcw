@@ -1,6 +1,11 @@
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -32,7 +37,10 @@ module.exports = {
       zIndex: ["hover", "active"],
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("./node_modules/tw-elements/dist/plugin"),
+  ],
   future: {
     purgeLayersByDefault: true,
   },
