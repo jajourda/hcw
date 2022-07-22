@@ -112,7 +112,7 @@ export default function PublicReading(props: any) {
         col3Small="Torah Title"
       />
 
-      <div className="container mx-auto py-10 flex justify-center h-screen">
+      <div className="container mx-auto py-10 flex justify-center ">
         <div className="  h-full flex flex-col">
           <div
             className="
