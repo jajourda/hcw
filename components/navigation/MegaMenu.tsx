@@ -9,7 +9,7 @@ import IconDropDown from './IconDropdown';
 export interface ITopNavProps {
 }
 
-export default function TopNav(props: ITopNavProps) {
+export default function TopNav() {
     return (
         <nav className="navbar navbar-expand-lg shadow-lg py-2 bg-gray-50 relative flex flex-wrap items-center w-full justify-between">
             <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
