@@ -27,7 +27,7 @@ export default function TopNav(props: ITopNavProps) {
                         <MegaMenuDropdown text="PRAY" />
                     </ul>
                     {/* <!-- Left links --> */}
-                    <HeaderSearch />
+                    <HeaderSearch placeholder='Search' />
                 </div>
                 {/* <!-- Collapsible wrapper --> */}
 
