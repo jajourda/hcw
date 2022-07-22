@@ -3,7 +3,7 @@ import * as React from 'react';
 export interface IIconDropDownProps {
 }
 
-export default function IconDropDown(props: IIconDropDownProps) {
+export default function IconDropDown() {
     return (
         <div className="dropdown relative">
             <a className="

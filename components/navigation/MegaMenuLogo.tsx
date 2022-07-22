@@ -3,7 +3,7 @@ import * as React from 'react';
 export interface IMegaMenuLogoProps {
 }
 
-export default function MegaMenuLogo(props: IMegaMenuLogoProps) {
+export default function MegaMenuLogo() {
     return (
         <a className="
         flex
